@@ -3,8 +3,8 @@
     <h1>{{ Title }}</h1>
     <Button
       @toggle-addTask="$emit('toggle-addTask')"
-      :text="showAddTask ? 'Close' : 'Add Task'"
-      :color="showAddTask ? 'red' : 'green'"
+      :text="showAddTasks ? 'Close' : 'Add Task'"
+      :color="showAddTasks ? 'red' : 'green'"
     />
   </header>
 </template>
@@ -17,8 +17,8 @@ export default {
     Title: {
       type: String,
       default: "",
-      showAddTask: Boolean,
     },
+    showAddTasks: Boolean,
   },
   components: {
     Button,
